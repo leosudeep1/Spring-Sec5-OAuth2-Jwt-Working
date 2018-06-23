@@ -53,6 +53,11 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
 	@Qualifier(BeanIds.AUTHENTICATION_MANAGER)
 	private AuthenticationManager authenticationManager;
 	
+	/*
+	 * We have pass userDetailService in AuthorizationServer also, because when we trying to get token by using refresh_token.
+	 * at that time this AuthorizationServer will trying to get user information by executing loadUserByUsername method of UserDetailsService.
+	 * This AuthorizationServer will get username which is associated with that access token, and pass to loadUserByUsername.
+	 */
 	@Autowired
 	private CustomUserDetailsService userDetailService;
 
@@ -70,8 +75,8 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
         endpoints.tokenStore(tokenStore())
                  .accessTokenConverter(accessTokenConverter())
                  .authenticationManager(authenticationManager)
-                 .allowedTokenEndpointRequestMethods(HttpMethod.GET,HttpMethod.POST).tokenEnhancer(tokenEnhancerChain)
-                 .userDetailsService(userDetailService);
+                 .userDetailsService(userDetailService)
+                 .allowedTokenEndpointRequestMethods(HttpMethod.GET,HttpMethod.POST).tokenEnhancer(tokenEnhancerChain);
     }
  
     
@@ -93,7 +98,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
 			.scopes("read","write")
 			.secret(CLIENT_SECRET)
 			.resourceIds(RESOURCE_ID)
-			.accessTokenValiditySeconds(5000)
+			.accessTokenValiditySeconds(20)
 			.refreshTokenValiditySeconds(50000);
 	}
  
@@ -115,6 +120,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
         DefaultTokenServices defaultTokenServices = new DefaultTokenServices();
         defaultTokenServices.setTokenStore(tokenStore());
         defaultTokenServices.setSupportRefreshToken(true);
+        //defaultTokenServices.setAccessTokenValiditySeconds(30);
         return defaultTokenServices;
     }
     
