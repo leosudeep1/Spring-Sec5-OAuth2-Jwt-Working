@@ -1,0 +1,421 @@
+{
+	"id": "0a320394-8058-4cab-8cd3-df28dd3e2805",
+	"name": "Spring-Security-JWT",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"3954cd57-bea4-4bb6-bc54-15088eb1e6ce",
+		"22ff09a7-cd25-45d5-8912-3d5a4592e69b",
+		"39402467-df44-4f43-b89e-c3c337fbbb9b",
+		"fbbcc92c-f0fa-4f12-83cd-20ba2ae86158",
+		"842b7559-ac7c-47ed-9bd5-798b631754a5",
+		"346fdfda-50d4-40cb-8321-f8db2bd71ceb",
+		"95651f08-7d79-4357-a1d3-a90ab7188dac",
+		"0f172ba6-af91-4aec-919a-778505c4742d",
+		"9bda3222-f0ec-4704-92ba-c70411febf45"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "0f172ba6-af91-4aec-919a-778505c4742d",
+			"name": "get Token using refresh token",
+			"url": "{{port}}/oauth/token",
+			"description": "",
+			"data": [
+				{
+					"key": "refresh_token",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibXlSZXN0QXBwIl0sInVzZXJfbmFtZSI6ImtldmluIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sInJvbGVzIjoia2V2aW5AZ21haWwuY29tIiwiYXRpIjoiZDMxZDdlM2QtOTA2OC00NTBjLTkzZDctMjNiMDdlYzQ1ZjAzIiwiaWQiOjEsImV4cCI6MTUyOTgxMjg2NSwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjZmZTg0OTU0LTY2OGMtNDNmNi1hZTllLTlhY2E3Y2JkNDQ1NiIsImNsaWVudF9pZCI6Im15YXBwIiwidXNlcm5hbWUiOiJrZXZpbiJ9.TYO03MU0lDqwrUwX5zcn96rAo0zPop8EsF5aTzNV_TM",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "access_token",
+					"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibXlSZXN0QXBwIl0sInVzZXJfbmFtZSI6ImtldmluIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sInJvbGVzIjoia2V2aW5AZ21haWwuY29tIiwiaWQiOjEsImV4cCI6MTUyOTc2Mjk0MCwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6ImQzMWQ3ZTNkLTkwNjgtNDUwYy05M2Q3LTIzYjA3ZWM0NWYwMyIsImNsaWVudF9pZCI6Im15YXBwIiwidXNlcm5hbWUiOiJrZXZpbiJ9.TDOlbcE8P43txggpbdjpkjzOkbUiXCrfMjZnlZBOH18",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "grant_type",
+					"value": "refresh_token",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "scopes",
+					"value": "read write",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www.form-urlencoded",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				}
+			],
+			"dataMode": "urlencoded",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "1234",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "myapp",
+						"type": "string"
+					}
+				]
+			},
+			"events": null,
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "22ff09a7-cd25-45d5-8912-3d5a4592e69b",
+			"name": "get Token for Teacher",
+			"url": "{{port}}/oauth/token",
+			"description": "",
+			"data": [
+				{
+					"key": "username",
+					"value": "hari",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "password",
+					"value": "hari123",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "grant_type",
+					"value": "password",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "scopes",
+					"value": "read write",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www.form-urlencoded",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				}
+			],
+			"dataMode": "urlencoded",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "1234",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "myapp",
+						"type": "string"
+					}
+				]
+			},
+			"events": null,
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "346fdfda-50d4-40cb-8321-f8db2bd71ceb",
+			"name": "get User Profile Copy",
+			"url": "{{port}}/api/user/profile",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "39402467-df44-4f43-b89e-c3c337fbbb9b",
+			"name": "Signup API",
+			"url": "{{port}}/api/auth/signup",
+			"description": null,
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n\t\"name\": \"Sud Bis\",\n\t\"username\": \"sud\",\n\t\"email\": \"sud@gmail.com\",\n\t\"password\": \"sud123\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3954cd57-bea4-4bb6-bc54-15088eb1e6ce",
+			"name": "get Token",
+			"url": "{{port}}/oauth/token",
+			"description": "",
+			"data": [
+				{
+					"key": "username",
+					"value": "kevin",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "password",
+					"value": "kevin123",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "grant_type",
+					"value": "password",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "scopes",
+					"value": "read write",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www.form-urlencoded",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				}
+			],
+			"dataMode": "urlencoded",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "1234",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "myapp",
+						"type": "string"
+					}
+				]
+			},
+			"events": null,
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "842b7559-ac7c-47ed-9bd5-798b631754a5",
+			"name": "get User Profile",
+			"url": "{{port}}/api/user/profile",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibXlSZXN0QXBwIl0sInVzZXJfbmFtZSI6ImtldmluIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sInJvbGVzIjoia2V2aW5AZ21haWwuY29tIiwiaWQiOjEsImV4cCI6MTUyOTc2Mjk5MiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjA4OTAyN2Y0LWNlNzQtNGI0Yi1hYzY0LWFhYWViMzNhOWI4MCIsImNsaWVudF9pZCI6Im15YXBwIiwidXNlcm5hbWUiOiJrZXZpbiJ9.6svD60yyotyp4aGCgEaxnJtV-qt26l40i98LFF0DLQg",
+						"type": "string"
+					}
+				],
+				"type": "bearer"
+			},
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "95651f08-7d79-4357-a1d3-a90ab7188dac",
+			"name": "get Admin Profile",
+			"url": "{{port}}/api/admin/profile",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibXlSZXN0QXBwIl0sInVzZXJfbmFtZSI6ImtldmluIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sInJvbGVzIjoia2V2aW5AZ21haWwuY29tIiwiaWQiOjEsImV4cCI6MTUyOTc2MjM0NSwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjUxMjI5ZmViLTk4OTAtNDQzMC1iODNhLWU5NTdkMGU2ZjU2NiIsImNsaWVudF9pZCI6Im15YXBwIiwidXNlcm5hbWUiOiJrZXZpbiJ9.tIJJ402W-uPiS40nBk9qF7No7d0pOYJg54bTzueahd4",
+						"type": "string"
+					}
+				],
+				"type": "bearer"
+			},
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "9bda3222-f0ec-4704-92ba-c70411febf45",
+			"name": "Register Teacher API",
+			"url": "{{port}}/registerTeacher",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsibXlSZXN0QXBwIl0sInVzZXJfbmFtZSI6ImtldmluIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sInJvbGVzIjoia2V2aW5AZ21haWwuY29tIiwiaWQiOjEsImV4cCI6MTUyOTkxODAxNiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjI4OWQ5ODI2LWRjYzMtNDQ2ZS04NDg1LTllZTFlMGVlYTIwMiIsImNsaWVudF9pZCI6Im15YXBwIiwidXNlcm5hbWUiOiJrZXZpbiJ9.AseXvNWgNFf2bVNGB7rGlHVSMDs-oT1v9m-gj1Jcf9Y",
+						"type": "string"
+					}
+				],
+				"type": "bearer"
+			},
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"signupPayload\" : {\n\t\t\"name\": \"Hari Krishna\",\n\t\t\"username\": \"hari\",\n\t\t\"email\": \"hari@gmail.com\",\n\t\t\"password\": \"hari123\"\n\t},\n\t\"commonDetailsPayload\" : {\n\t\t\"address\" : \"ameerpet\",\n\t\t\"primaryNumber\" : \"9099999900\",\n\t\t\"secondaryNumber\" : \"8988889988\",\n\t\t\"dateOfBirth\" : \"11/04/1982\",\n\t\t\"city\" : \"Hyderabad\",\n\t\t\"state\" : \"TL\",\n\t\t\"landmark\" : \"\",\n\t\t\"aadharNumber\" : \"09as99aa99sa99ss\",\n\t\t\"passportNumber\" : \"\"\n\t}\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "fbbcc92c-f0fa-4f12-83cd-20ba2ae86158",
+			"name": "Get Admin Token",
+			"url": "{{port}}/oauth/token",
+			"description": "",
+			"data": [
+				{
+					"key": "username",
+					"value": "sud@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "sud123",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "grant_type",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "scopes",
+					"value": "read write",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "1234",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "myapp",
+						"type": "string"
+					}
+				]
+			},
+			"events": [],
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		}
+	]
+}
